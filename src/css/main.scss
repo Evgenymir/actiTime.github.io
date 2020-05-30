@@ -1,0 +1,39 @@
+// vars
+$text: #4b5d68;
+$black: #000000;
+$white: #fff;
+$violet: #9c69e2;
+$violet-light: #b17ff4;
+$orange: #eeaa12;
+$orange-light: #ffbe2d;
+$yellow: #ffc84d;
+$yellow-light: #fff3d7;
+$blue-dark: #212353;
+$pink: #F063B8;
+$violet-light-two: #d6b9ff;
+$violet-light-three: #f9f4ff;
+$article-shadow: #f5bd3f;
+
+$placeholder: #a9a0b6;
+
+// layout
+@import "_misc/font";
+@import "_misc/mixins";
+@import "_misc/normalize";
+@import "_misc/setting";
+
+// components
+@import "../components/menu/menu";
+@import "../components/burger/burger";
+@import "../components/button/button";
+@import "../components/formBlocks/input/input";
+@import "../components/formBlocks/submit/submit";
+@import "../components/mobileMenu/mobileMenu";
+@import "../components/article/article";
+@import "../components/slickSlider/slickSlider";
+
+// style
+@import "../pages/layout/_layout";
+@import "../pages/layout/_header";
+@import "../pages/index";
+@import "../pages/layout/_footer";

@@ -1,0 +1,13 @@
+//- Миксин
+-
+mixin checkbox(href, text, linkText)
+	label.b-custom-checkbox
+		input(type="checkbox").b-custom-checkbox__input
+		span.b-custom-checkbox__box
+		span.b-custom-checkbox__text= text
+		a.b-custom-checkbox__link(href=href)= linkText
+-;
+
+//- Добавление
+
+//- +checkbox('#','Согласие на обработку данных', 'ссылка')

@@ -1,0 +1,42 @@
+.burger {
+	width: 36px;
+	height: 24px;
+	cursor: pointer;
+
+	&.is-active {
+		.burger__line {
+			&:nth-child(1) {
+				top: 11px;
+				transform: rotate(45deg);
+			}
+
+			&:nth-child(2) {
+				opacity: 0;
+				left: -15px;
+			}
+
+			&:nth-child(3) {
+				top: -10px;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+	@include laptop {
+		display: none;
+	}
+}
+
+.burger__line {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 3px;
+	background-color: $blue-dark;
+	transition: all ease 0.3s;
+
+	&:not(:last-child) {
+		margin-bottom: 7.5px;
+	}
+}

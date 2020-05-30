@@ -1,0 +1,24 @@
+.header {
+    position: relative;
+    background-color: $white;
+}
+
+.main-content {
+    padding-top: 50px;
+    padding-bottom: 73px;
+
+    @include tablet-portrait {
+        padding-top: 45px;
+        padding-bottom: 92px;
+    }
+
+    @include laptop {
+        padding-top: 105px;
+        padding-bottom: 151px;
+    }
+}
+
+.footer {
+    background-color: $violet;
+    margin-top: auto;
+}

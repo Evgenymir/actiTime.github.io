@@ -1,0 +1,13 @@
+-
+mixin article(title, text, link, label)
+    article.article-block
+        if label == 'new'
+            span.article-block__label-new= label
+        h2.article-block__title= title
+        p.article-block__description= text
+        a.article-block__link(href="#")= link
+            svg(width="22" height="16")
+                use(xlink:href="#icon-arrow-right-color")
+-;
+
+//- +article('Заголовок', 'Текст', 'Кнопка')

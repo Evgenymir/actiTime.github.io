@@ -1,0 +1,102 @@
+.slider {
+    position: relative;
+    padding-top: 6px;
+    overflow: hidden;
+
+    .slick-track {
+        display: flex;
+        counter-reset: slides;
+    }
+
+    .slick-slide {
+        @include tablet-portrait {
+            position: relative;
+
+            &:before {
+                @include roboto(bold);
+                counter-increment: slides;
+                content: counter(slides);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                width: 167px;
+                height: 194px;
+                text-align: center;
+                font-size: 202px;
+                line-height: 194px;
+                color: $violet;
+
+                @include laptop {
+                    left: -15px;
+                }
+            }
+        }
+    }
+
+    @include tablet-portrait {
+        max-width: 574px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include laptop {
+        max-width: 1080px;
+    }
+
+    .slick-dots {
+        @include flex(center);
+        list-style-type: none;
+        padding-top: 54px;
+
+        li {
+            @include flex(center);
+            align-items: center;
+            width: 23px;
+            height: 10px;
+            line-height: 10px;
+            text-align: center;
+            cursor: pointer;
+
+            &.slick-active {
+                button {
+                    width: 10px;
+                    height: 10px;
+                    background-color: $pink;
+                }
+            }
+        }
+
+        button {
+            display: inline-block;
+            vertical-align: top;
+            width: 6px;
+            height: 6px;
+            line-height: 10px;
+            background-color: $white;
+            border-radius: 50%;
+            border: none;
+            margin: 0;
+            padding: 0;
+            text-indent: -2000px;
+            transition: width, height, background, ease 0.5s;
+            cursor: pointer;
+
+            &:focus {
+                outline: 0;
+            }
+        }
+
+        @include tablet-portrait {
+            justify-content: flex-start;
+            padding-top: 60px;
+        }
+    }
+}
+
+.slider__item {
+    position: relative;
+    padding: 0 20px;
+
+
+}

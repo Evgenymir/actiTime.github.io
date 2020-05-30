@@ -1,0 +1,114 @@
+.menu {
+    display: none;
+    width: 65%;
+    margin-left: 130px;
+
+    @include laptop {
+        display: block;
+    }
+}
+
+.menu__list {
+    @include flex();
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu__item {
+    position: relative;
+    margin-right: 47px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &.is-active {
+        .menu__link {
+            color: $violet;
+        }
+    }
+
+    &:hover {
+        .menu__submenu {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .menu__link {
+            color: $violet;
+        }
+
+        .menu__arrow {
+            fill: $violet;
+            transform: rotate(-180deg);
+        }
+    }
+}
+
+.menu__link {
+    @include roboto(medium);
+    font-size: 18px;
+    line-height: 30px;
+    text-decoration: none;
+    color: $blue-dark;
+    transition: color ease 0.5s;
+}
+
+.menu__arrow {
+    display: inline-block;
+    vertical-align: middle;
+    fill: $blue-dark;
+    margin-left: 4px;
+    transition: transform ease 0.5s;
+}
+
+.menu__submenu {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: -8px;
+    list-style-type: none;
+    background-color: $white;
+    border: 1px solid $violet;
+    border-radius: 10px;
+    padding: 12px 17px 12px 24px;
+    box-shadow: 0 4px 0 rgba($violet, 0.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity, visibility, ease 0.5s;
+
+    &:before {
+        content: "";
+        width: 18px;
+        height: 18px;
+        background-color: $white;
+        border: 1px solid $violet;
+        border-right: 0;
+        border-bottom: 0;
+        position: absolute;
+        top: -10px;
+        left: 58px;
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        content: "";
+        width: 100%;
+        height: 25px;
+        position: absolute;
+        top: -25px;
+        left: 0;
+    }
+}
+
+.menu__submenu-link {
+    font-size: 16px;
+    line-height: 32px;
+    white-space: nowrap;
+    text-decoration: none;
+    color: $blue-dark;
+    transition: color ease 0.5s;
+
+    &:hover {
+        color: $violet;
+    }
+}

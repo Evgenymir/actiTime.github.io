@@ -1,0 +1,41 @@
+//- Подключаем конфиг с переменными
+block config
+	include _config.pug
+
+//- Подключаем компоненты с миксинами
+include ../../components/formBlocks/input/input
+include ../../components/formBlocks/submit/submit
+include ../../components/button/button
+include ../../components/article/article
+
+doctype html
+html(lang="ru-RU")
+	head
+		include _head.pug
+		block title
+			title #{headTitle}
+
+		//css
+		block cssLinks
+			link(rel="stylesheet" href=cssPath+"/main.css")
+
+	body
+
+		// Шапка
+		header.header
+			include _header.pug
+
+		// Контент
+		main.main-content
+			block content
+
+		// Подвал
+		footer.footer
+			include _footer.pug
+
+		// Спрайт
+		include sprite.html
+
+		// script
+		block scripts
+			script(src="./js/app.min.js")

@@ -1,0 +1,18 @@
+.container
+    .footer-wrapper
+        a(href="/").footer-logo
+            svg(width="49" height="35")
+                use(xlink:href="#icon-logo-white")
+        .footer-menu
+            ul.footer-menu__list
+                li.footer-menu__item
+                    a(href="#").footer-menu__link About Us
+                li.footer-menu__item
+                    a(href="#").footer-menu__link Privacy Policy
+        form(action="" method="POST").form-subscribe
+            +input("email", "email", "email", {
+                value: false,
+                placeholder: 'Enter your email',
+                required: true,
+            })
+            +submit('submit', 'Sign Up Now')(class="form-subscribe__button")

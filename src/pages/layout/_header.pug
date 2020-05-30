@@ -1,0 +1,10 @@
+.container
+    .header-wrapper
+        a(href="/").logo
+            svg(width="49" height="35")
+                use(xlink:href="#icon-logo")
+        include ../../components/menu/menu
+        +button('#', 'Sign Up')(class="button-sign-up")
+        include ../../components/burger/burger.pug
+
+include ../../components/mobileMenu/mobileMenu

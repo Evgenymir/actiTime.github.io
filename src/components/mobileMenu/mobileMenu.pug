@@ -1,0 +1,17 @@
+.mobile-menu.j-mobile-menu
+	ul.mobile-menu__list
+		li.mobile-menu__item
+			a.mobile-menu__link.j-mobile-menu__link(href="#") About
+		li.mobile-menu__item
+			a.mobile-menu__link.j-mobile-menu__link(href="#") Help
+				svg(width="11" height="18").menu__arrow
+					use(xlink:href="#icon-arrow-right")
+			ul.mobile-menu__submenu
+				li.mobile-menu__submenu-item
+					a.mobile-menu__submenu-link User Guide
+				li.mobile-menu__submenu-item
+					a.mobile-menu__submenu-link Contact Support
+		li.mobile-menu__item
+			a.mobile-menu__link.j-mobile-menu__link(href="#") Features
+	.mobile-menu__buttons
+		+button('#', 'Sign Up')(class="button-sign-up")
