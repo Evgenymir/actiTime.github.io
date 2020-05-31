@@ -34,28 +34,17 @@
         }
     }
 
-    @include tablet-portrait {
-        max-width: 574px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    @include laptop {
-        max-width: 1080px;
-    }
-
     .slick-dots {
         @include flex(center);
         list-style-type: none;
-        padding-top: 54px;
+        padding-top: 46px;
 
         li {
             @include flex(center);
             align-items: center;
-            width: 23px;
-            height: 10px;
-            line-height: 10px;
-            text-align: center;
+            width: 26px;
+            height: 26px;
+            padding: 8px;
             cursor: pointer;
 
             &.slick-active {
@@ -68,11 +57,9 @@
         }
 
         button {
-            display: inline-block;
-            vertical-align: top;
+            display: block;
             width: 6px;
             height: 6px;
-            line-height: 10px;
             background-color: $white;
             border-radius: 50%;
             border: none;
@@ -89,8 +76,18 @@
 
         @include tablet-portrait {
             justify-content: flex-start;
-            padding-top: 60px;
+            padding-top: 52px;
         }
+    }
+
+    @include tablet-portrait {
+        max-width: 574px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include laptop {
+        max-width: 1080px;
     }
 }
 

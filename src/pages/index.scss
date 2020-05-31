@@ -1,6 +1,6 @@
 .content-slider-block {
     background-color: $yellow;
-    padding: 38px 0 35px;
+    padding: 38px 0 27px;
     overflow: hidden;
 
     @include tablet-portrait {
@@ -9,7 +9,7 @@
         margin-left: auto;
         margin-right: auto;
         padding-top: 97px;
-        padding-bottom: 60px;
+        padding-bottom: 52px;
     }
 
     @include laptop {
