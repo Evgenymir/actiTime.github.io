@@ -7,8 +7,8 @@ const openSubmenu = () => {
             item.addEventListener('click', (e) => {
                 e.preventDefault();
 
-                item.classList.toggle('is-open');
-                submenu.classList.toggle('is-open');
+                item.classList.toggle('mobile-menu__link--is-open');
+                submenu.classList.toggle('mobile-menu__submenu--is-open');
             })
         }
     });

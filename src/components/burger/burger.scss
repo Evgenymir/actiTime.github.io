@@ -3,7 +3,7 @@
 	height: 24px;
 	cursor: pointer;
 
-	&.is-active {
+	&--is-active {
 		.burger__line {
 			&:nth-child(1) {
 				top: 11px;
