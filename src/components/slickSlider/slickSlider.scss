@@ -1,7 +1,6 @@
 .slider {
-    position: relative;
-    padding-top: 6px;
-    overflow: hidden;
+    background-color: $yellow;
+    padding: 38px 0 27px;
 
     .slick-track {
         display: flex;
@@ -17,7 +16,7 @@
                 counter-increment: slides;
                 content: counter(slides);
                 position: absolute;
-                top: 0;
+                top: 45px;
                 left: 0;
                 z-index: 1;
                 width: 167px;
@@ -81,6 +80,26 @@
     }
 
     @include tablet-portrait {
+        max-width: 682px;
+        border-radius: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 97px;
+        padding-bottom: 52px;
+    }
+
+    @include laptop {
+        max-width: 1200px;
+    }
+
+}
+
+.slider__content-wrapper {
+    position: relative;
+    padding-top: 6px;
+    overflow: hidden;
+
+    @include tablet-portrait {
         max-width: 574px;
         margin-left: auto;
         margin-right: auto;
@@ -94,6 +113,4 @@
 .slider__item {
     position: relative;
     padding: 0 20px;
-
-
 }
