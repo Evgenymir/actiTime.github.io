@@ -1,14 +1,15 @@
-.container
-    .footer-wrapper
-        a(href="/").footer-logo
+.footer-wrapper
+    .footer__logo
+        a(href="/").logo
             svg(width="49" height="35")
                 use(xlink:href="#icon-logo-white")
-        .footer-menu
-            ul.footer-menu__list
-                li.footer-menu__item
-                    a(href="#").footer-menu__link About Us
-                li.footer-menu__item
-                    a(href="#").footer-menu__link Privacy Policy
+    .footer__menu
+        ul.footer__menu-list
+            li.footer__menu-item
+                a(href="#").footer__menu-link About Us
+            li.footer__menu-item
+                a(href="#").footer__menu-link Privacy Policy
+    .footer__form
         form(action="" method="POST").form-subscribe
             +input("email", "email", "email", {
                 value: false,

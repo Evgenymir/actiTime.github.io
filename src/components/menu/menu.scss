@@ -1,7 +1,6 @@
 .menu {
     display: none;
     width: 65%;
-    margin-left: 130px;
 
     @include laptop {
         display: block;

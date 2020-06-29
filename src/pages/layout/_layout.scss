@@ -1,9 +1,13 @@
 .header {
+    grid-area: header;
+    grid-column: 1 / -1;
     position: relative;
     background-color: $white;
 }
 
 .main-content {
+    grid-area: content;
+    grid-column: 1 / -1;
     padding-top: 50px;
     padding-bottom: 73px;
 
@@ -19,6 +23,11 @@
 }
 
 .footer {
+    grid-area: footer;
+    grid-column: 1 / -1;
     background-color: $violet;
-    margin-top: auto;
+
+    @include for-ie {
+        margin-top: auto;
+    }
 }

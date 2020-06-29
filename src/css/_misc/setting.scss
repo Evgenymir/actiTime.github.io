@@ -19,14 +19,22 @@ body, html {
 body {
 	@include roboto();
 	min-width: 320px;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas: "header"
+						 "content"
+						 "footer";
 	font-size: 1rem;
 	color: $text;
 	line-height: 1.42;
 	-webkit-font-smoothing: antialiased;
 	background-color: $white;
+
+	@include for-ie {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
 }
 
 input, textarea {

@@ -16,11 +16,12 @@
     <body>
         <!-- Шапка-->
         <header class="header">
-            <div class="container">
-                <div class="header-wrapper"><a class="logo" href="/">
+            <div class="header-wrapper">
+                <div class="header__logo"><a class="logo" href="/">
                         <svg width="49" height="35">
                             <use xlink:href="#icon-logo"></use>
-                        </svg></a>
+                        </svg></a></div>
+                <div class="header__menu">
                     <nav class="menu">
                         <ul class="menu__list">
                             <li class="menu__item"><a class="menu__link" href="#">About</a></li>
@@ -34,7 +35,11 @@
                             </li>
                             <li class="menu__item"><a class="menu__link" href="#">Features</a></li>
                         </ul>
-                    </nav><a class="button button-sign-up" href="#">Sign Up</a>
+                    </nav>
+                </div>
+                <div class="header__button"><a class="button button-sign-up" href="#">Sign Up</a>
+                </div>
+                <div class="header__burger">
                     <div class="burger j-burger">
                         <div class="burger__line"></div>
                         <div class="burger__line"></div>
@@ -61,62 +66,26 @@
         </header>
         <!-- Контент-->
         <main class="main-content">
-            <div class="container">
-                <h1 class="content-title">Features</h1>
-                <div class="content-description">Some of the features and advantages that we provide for those of you who store data in this Data Warehouse.</div>
-            </div>
-            <section class="content-slider-block">
-                <div class="slider">
-                    <div class="slider__content j-slider">
-                        <div class="slider__item">
-                            <article class="article-block">
-                                <h2 class="article-block__title">First Feature</h2>
-                                <p class="article-block__description">Little Red Cap opened her eyes and when she saw the sunbeams dancing to and fro through the trees and how the ground was covered with beautiful flowers.</p><a class="article-block__link" href="#">Learn more <svg width="22" height="16">
-                                        <use xlink:href="#icon-arrow-right-color"></use>
-                                    </svg></a>
-                            </article>
-                        </div>
-                        <div class="slider__item">
-                            <article class="article-block">
-                                <h2 class="article-block__title">Second Feature</h2>
-                                <p class="article-block__description">Each time she picked one she thought that she could see an even more beautiful one a little way off, and she ran after it, going further and further into the woods.</p><a class="article-block__link" href="#">Learn more <svg width="22" height="16">
-                                        <use xlink:href="#icon-arrow-right-color"></use>
-                                    </svg></a>
-                            </article>
-                        </div>
-                        <div class="slider__item">
-                            <article class="article-block">
-                                <h2 class="article-block__title">Third Feature</h2>
-                                <p class="article-block__description">The wolf pressed the latch, and the door opened. He stepped inside, went straight to the grandmother's bed, and ate her up.</p><a class="article-block__link" href="#">Learn more <svg width="22" height="16">
-                                        <use xlink:href="#icon-arrow-right-color"></use>
-                                    </svg></a>
-                            </article>
-                        </div>
-                        <div class="slider__item">
-                            <article class="article-block"><span class="article-block__label-new">new</span>
-                                <h2 class="article-block__title">Fourth Feature</h2>
-                                <p class="article-block__description">Little Red Cap had run after the flowers. After she had gathered so many that she could not carry any more, she remembered her grandmother.</p><a class="article-block__link" href="#">Learn more <svg width="22" height="16">
-                                        <use xlink:href="#icon-arrow-right-color"></use>
-                                    </svg></a>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <!--.container-->
+            <!--	h1.content-title Features-->
+            <!--	.content-description Some of the features and advantages that we provide for those of you who store data in this Data Warehouse.-->
+            <!--section.content-slider-block-->
+            <!--	include ../components/slickSlider/slickSlider-->
         </main>
         <!-- Подвал-->
         <footer class="footer">
-            <div class="container">
-                <div class="footer-wrapper"><a class="footer-logo" href="/">
+            <div class="footer-wrapper">
+                <div class="footer__logo"><a class="logo" href="/">
                         <svg width="49" height="35">
                             <use xlink:href="#icon-logo-white"></use>
-                        </svg></a>
-                    <div class="footer-menu">
-                        <ul class="footer-menu__list">
-                            <li class="footer-menu__item"><a class="footer-menu__link" href="#">About Us</a></li>
-                            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Privacy Policy</a></li>
-                        </ul>
-                    </div>
+                        </svg></a></div>
+                <div class="footer__menu">
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">About Us</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer__form">
                     <form class="form-subscribe" action="" method="POST">
                         <input class="input-block" type="email" id="email" name="email" placeholder="Enter your email" required="required" />
                         <button class="button-submit form-subscribe__button" type="submit">Sign Up Now</button>
