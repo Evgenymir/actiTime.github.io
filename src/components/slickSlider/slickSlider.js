@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import slick from 'slick-carousel';
 
-const slider = () => {
-	$('.j-slider').slick({
+const runAdvantagesSlider = () => {
+	$('.j-advantages-slider').slick({
 		infinite: false,
 		arrows: false,
 		dots: true,
@@ -20,4 +20,4 @@ const slider = () => {
 	});
 };
 
-export default slider;
+export default runAdvantagesSlider;

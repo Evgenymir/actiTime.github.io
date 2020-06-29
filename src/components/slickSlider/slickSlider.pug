@@ -1,36 +1,48 @@
 -
 mixin slickItem
-	.slider__item
+	.advantages-slider__item
 		if block
 			block
 		else
 -;
 
-.slider
-	.slider__content-wrapper
-		.slider__content.j-slider
+-
+mixin sliderItemContent(title, text, link, label)
+	article.advantages-slider__item-content
+		if label
+			span.advantages-slider__item-label= label
+		h2.advantages-slider__item-title= title
+		p.advantages-slider__item-text= text
+		a(href="#").advantages-slider__item-link= link
+			svg(width="22" height="16").advantages-slider__item-icon
+				use(xlink:href="#icon-arrow-right-color")
+-;
+
+.advantages-slider
+	.advantages-slider__wrapper
+		.advantages-slider__content.j-advantages-slider
 			+slickItem
-				+article(
-					'First Feature',
-					'Little Red Cap opened her eyes and when she saw the sunbeams dancing to and fro through the trees and how the ground was covered with beautiful flowers.',
-					'Learn more'
+				+sliderItemContent(
+					"First Feature",
+					"Little Red Cap opened her eyes and when she saw the sunbeams dancing to and fro through the trees and how the ground was covered with beautiful flowers.",
+					"Learn more"
 				)
 			+slickItem
-				+article(
-					'Second Feature',
-					'Each time she picked one she thought that she could see an even more beautiful one a little way off, and she ran after it, going further and further into the woods.',
-					'Learn more'
+				+sliderItemContent(
+					"Second Feature",
+					"Each time she picked one she thought that she could see an even more beautiful one a little way off, and she ran after it, going further and further into the woods.",
+					"Learn more"
 				)
 			+slickItem
-				+article(
-					'Third Feature',
-					'The wolf pressed the latch, and the door opened. He stepped inside, went straight to the grandmother\'s bed, and ate her up.',
-					'Learn more'
+				+sliderItemContent(
+					"Third Feature",
+					"The wolf pressed the latch, and the door opened. He stepped inside, went straight to the grandmother's bed, and ate her up.",
+					"Learn more"
 				)
 			+slickItem
-				+article(
-					'Fourth Feature',
-					'Little Red Cap had run after the flowers. After she had gathered so many that she could not carry any more, she remembered her grandmother.',
-					'Learn more',
-					'new'
+				+sliderItemContent(
+					"Fourth Feature",
+					"Little Red Cap had run after the flowers. After she had gathered so many that she could not carry any more, she remembered her grandmother.",
+					"Learn more",
+					"new"
 				)

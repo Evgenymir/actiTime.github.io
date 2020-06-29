@@ -1,10 +1,10 @@
 .container
-    .footer__block
+    .footer__wrapper
         a(href="/").logo
             svg(width="49" height="35").logo-icon
                 use(xlink:href="#icon-logo-white")
         .footer__menu
-            ul.footer-menu__list.list
+            ul.footer-menu__list
                 li.footer-menu__item
                     a(href="#").footer-menu__link About Us
                 li.footer-menu__item
@@ -15,4 +15,4 @@
                 placeholder: 'Enter your email',
                 required: true,
             })
-            +submit('submit', 'Sign Up Now')(class="form-subscribe__button")
+            +submit('submit', 'Sign Up Now')(class="button--yellow")

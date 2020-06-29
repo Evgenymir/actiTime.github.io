@@ -13,7 +13,29 @@
 	cursor: pointer;
 	transition: background ease 0.5s;
 
-	&:hover {
-		background-color: $violet-light;
+	&:focus {
+		outline: 0;
+	}
+
+	@include laptop {
+		&:hover {
+			background-color: $violet-light;
+		}
+	}
+
+	&--yellow {
+		background-color: $orange;
+
+		@include laptop {
+			&:hover {
+				background-color: $orange-light;
+			}
+		}
+	}
+
+	&--submit {
+		font-size: 16px;
+		line-height: 26px;
+		padding: 11px 28px;
 	}
 }

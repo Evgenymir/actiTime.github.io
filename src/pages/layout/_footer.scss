@@ -1,4 +1,4 @@
-.footer__block {
+.footer__wrapper {
     @include flex(space-between);
     padding: 58px 0 52px;
 
@@ -20,6 +20,9 @@
 }
 
 .footer-menu__list {
+    list-style-type: none;
+    padding: 0;
+
     @include tablet-portrait {
         margin-left: 71px;
     }

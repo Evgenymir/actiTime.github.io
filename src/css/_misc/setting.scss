@@ -108,17 +108,13 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-.title {
-	@include roboto(bold);
-	text-align: center;
-	color: $blue-dark;
-	margin: 0;
-}
-
 .title-h1 {
+	@include roboto(bold);
 	font-size: 35px;
 	line-height: 45px;
-	margin-bottom: 40px;
+	color: $blue-dark;
+	text-align: center;
+	margin: 0 0 40px;
 
 	@include tablet-portrait {
 		margin-bottom: 37px;
@@ -140,9 +136,4 @@ h1, h2, h3, h4, h5, h6 {
 	&--max-width {
 		max-width: 649px;
 	}
-}
-
-.list {
-	list-style-type: none;
-	padding: 0;
 }

@@ -1,7 +1,7 @@
 -
 mixin submit(type, text)
-    button.button-submit(type=type class!=attributes.class)= text
+    button.button.button--submit(type=type class!=attributes.class)= text
 -;
 
 //- Вставка кнопки
-//- +submit('#', 'I want clients')(class="")
+//- +submit('submit', 'I want clients')(class="")
