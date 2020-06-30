@@ -10,7 +10,7 @@ const slider = () => {
 		slidesToScroll: 1,
 		mobileFirst: true,
 		responsive: [{
-			breakpoint: 1280,
+			breakpoint: 1279,
 			settings: {
 				slidesToShow: 2,
 				slidesToScroll: 2,
