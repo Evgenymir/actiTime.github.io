@@ -1,12 +1,12 @@
 -
 mixin article(title, text, link, label)
-    article.article-block
+    article.article
         if label == 'new'
-            span.article-block__label-new= label
-        h2.article-block__title= title
-        p.article-block__description= text
-        a.article-block__link(href="#")= link
-            svg(width="22" height="16")
+            span.article__label= label
+        h2.article__title= title
+        p.article__description= text
+        a.article__link(href="#")= link
+            svg(width="22" height="16").article__icon
                 use(xlink:href="#icon-arrow-right-color")
 -;
 

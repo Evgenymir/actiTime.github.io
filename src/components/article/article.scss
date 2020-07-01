@@ -1,4 +1,4 @@
-.article-block {
+.article {
     position: relative;
     max-width: 340px;
     background-color: $yellow-light;
@@ -15,7 +15,7 @@
     }
 }
 
-.article-block__label-new {
+.article__label {
     position: absolute;
     top: -6px;
     left: 30px;
@@ -35,14 +35,14 @@
     }
 }
 
-.article-block__title {
+.article__title {
     font-size: 25px;
     line-height: 50px;
     font-weight: 400;
     margin-bottom: 20px;
 }
 
-.article-block__description {
+.article__description {
     height: 160px;
     font-size: 16px;
     line-height: 26px;
@@ -50,19 +50,12 @@
     overflow: hidden;
 }
 
-.article-block__link {
+.article__link {
     @include roboto(bold);
     font-size: 16px;
     line-height: 26px;
     text-decoration: none;
     color: $blue-dark;
-
-    svg {
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 24px;
-        margin-top: -2px;
-    }
 
     @include laptop {
         transition: color ease 0.5s;
@@ -71,4 +64,11 @@
             color: $violet;
         }
     }
+}
+
+.article__icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 24px;
+    margin-top: -2px;
 }

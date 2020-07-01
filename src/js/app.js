@@ -1,6 +1,6 @@
 import Burger from '../components/burger/burger';
 import MobileMenu from '../components/mobileMenu/mobileMenu';
-import Slider from '../components/slickSlider/slickSlider';
+import AdvantagesSlider from '../components/slickSlider/slickSlider';
 
 
 const burgerItem = document.querySelector('.j-burger');
@@ -13,7 +13,7 @@ if(mobileMenuItem) {
 	MobileMenu();
 }
 
-const slider = document.querySelector('.j-slider');
-if(slider) {
-	Slider();
+const advantagesSlider = document.querySelector('.j-advantages-slider');
+if(advantagesSlider) {
+	AdvantagesSlider();
 }

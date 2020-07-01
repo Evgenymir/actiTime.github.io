@@ -3,8 +3,8 @@ const clickBurger = () => {
 	const mobileMenu = document.querySelector('.j-mobile-menu');
 
 	const openMenu = () => {
-		mobileMenu.classList.toggle('is-active');
-		burger.classList.toggle('is-active');
+		mobileMenu.classList.toggle('mobile-menu--is-active');
+		burger.classList.toggle('burger--is-active');
 	};
 
 

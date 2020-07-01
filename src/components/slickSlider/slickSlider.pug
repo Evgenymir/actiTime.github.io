@@ -1,36 +1,48 @@
 -
 mixin slickItem
-	.slider__item
+	.slider-description-product__item
 		if block
 			block
 		else
 -;
 
+-
+mixin sliderItemContent(title, text, link, label)
+	article.slider-description-product__item-content
+		if label
+			span.slider-description-product__item-label= label
+		h2.slider-description-product__item-title= title
+		p.slider-description-product__item-text= text
+		a(href="#").slider-description-product__item-link= link
+			svg(width="22" height="16").slider-description-product__item-icon
+				use(xlink:href="#icon-arrow-right-color")
+-;
 
-.slider
-	.slider__content.j-slider
-		+slickItem
-			+article(
-				'First Feature',
-				'Little Red Cap opened her eyes and when she saw the sunbeams dancing to and fro through the trees and how the ground was covered with beautiful flowers.',
-				'Learn more'
-			)
-		+slickItem
-			+article(
-				'Second Feature',
-				'Each time she picked one she thought that she could see an even more beautiful one a little way off, and she ran after it, going further and further into the woods.',
-				'Learn more'
-			)
-		+slickItem
-			+article(
-				'Third Feature',
-				'The wolf pressed the latch, and the door opened. He stepped inside, went straight to the grandmother\'s bed, and ate her up.',
-				'Learn more'
-			)
-		+slickItem
-			+article(
-				'Fourth Feature',
-				'Little Red Cap had run after the flowers. After she had gathered so many that she could not carry any more, she remembered her grandmother.',
-				'Learn more',
-				'new'
-			)
+.slider-description-product
+	.slider-description-product__wrapper
+		.slider-description-product__content.j-advantages-slider
+			+slickItem
+				+sliderItemContent(
+					"First Feature",
+					"Little Red Cap opened her eyes and when she saw the sunbeams dancing to and fro through the trees and how the ground was covered with beautiful flowers.",
+					"Learn more"
+				)
+			+slickItem
+				+sliderItemContent(
+					"Second Feature",
+					"Each time she picked one she thought that she could see an even more beautiful one a little way off, and she ran after it, going further and further into the woods.",
+					"Learn more"
+				)
+			+slickItem
+				+sliderItemContent(
+					"Third Feature",
+					"The wolf pressed the latch, and the door opened. He stepped inside, went straight to the grandmother's bed, and ate her up.",
+					"Learn more"
+				)
+			+slickItem
+				+sliderItemContent(
+					"Fourth Feature",
+					"Little Red Cap had run after the flowers. After she had gathered so many that she could not carry any more, she remembered her grandmother.",
+					"Learn more",
+					"new"
+				)

@@ -1,4 +1,4 @@
-.footer-wrapper {
+.footer__wrapper {
     @include flex(space-between);
     padding: 58px 0 52px;
 
@@ -13,7 +13,7 @@
     }
 }
 
-.footer-menu {
+.footer__menu {
     @include laptop {
         min-width: 30%;
     }
@@ -63,7 +63,7 @@
     text-align: center;
     padding-top: 34px;
 
-    .input-block {
+    .input {
         margin-bottom: 22px;
     }
 
@@ -74,7 +74,7 @@
         padding-top: 0;
         margin-left: auto;
 
-        .input-block {
+        .input {
             width: 57%;
             margin-bottom: 0;
             margin-right: 8.7%;
@@ -85,7 +85,7 @@
         min-width: 600px;
         margin-left: 0;
 
-        .input-block {
+        .input {
             width: 69.5%;
             margin-right: 5%;
         }

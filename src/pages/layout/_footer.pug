@@ -1,9 +1,9 @@
 .container
-    .footer-wrapper
-        a(href="/").footer-logo
-            svg(width="49" height="35")
+    .footer__wrapper
+        a(href="/").logo
+            svg(width="49" height="35").logo-icon
                 use(xlink:href="#icon-logo-white")
-        .footer-menu
+        .footer__menu
             ul.footer-menu__list
                 li.footer-menu__item
                     a(href="#").footer-menu__link About Us
@@ -15,4 +15,4 @@
                 placeholder: 'Enter your email',
                 required: true,
             })
-            +submit('submit', 'Sign Up Now')(class="form-subscribe__button")
+            +submit('submit', 'Sign Up Now')(class="button--yellow")

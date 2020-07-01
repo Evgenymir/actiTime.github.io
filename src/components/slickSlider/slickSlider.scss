@@ -1,7 +1,102 @@
-.slider {
-    position: relative;
-    padding-top: 6px;
-    overflow: hidden;
+.slider-description-product {
+    background-color: $yellow;
+    padding: 38px 0 27px;
+
+    &__wrapper {
+        position: relative;
+        padding-top: 6px;
+        overflow: hidden;
+
+        @include tablet-portrait {
+            max-width: 574px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include laptop {
+            max-width: 1080px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding: 0 20px;
+    }
+
+    &__item-content {
+        position: relative;
+        max-width: 340px;
+        background-color: $yellow-light;
+        border-radius: 50px;
+        box-shadow: 0 10px 0 $article-shadow;
+        padding: 41px 30px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include tablet-portrait {
+            max-width: 390px;
+            padding-left: 118px;
+            padding-right: 56px;
+        }
+    }
+
+    &__item-label {
+        position: absolute;
+        top: -6px;
+        left: 30px;
+        display: block;
+        width: 69px;
+        color: $white;
+        font-size: 18px;
+        line-height: 34px;
+        text-transform: uppercase;
+        text-align: center;
+        background-color: $pink;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 4px 0 rgba($black, 0.07);
+
+        @include tablet-portrait {
+            left: 118px;
+        }
+    }
+
+    &__item-title {
+        font-size: 25px;
+        line-height: 50px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    &__item-text {
+        height: 160px;
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+
+    &__item-link {
+        @include roboto(bold);
+        font-size: 16px;
+        line-height: 26px;
+        text-decoration: none;
+        color: $blue-dark;
+
+        @include laptop {
+            transition: color ease 0.5s;
+
+            &:hover {
+                color: $violet;
+            }
+        }
+    }
+
+    &__item-icon {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 24px;
+        margin-top: -2px;
+    }
 
     .slick-track {
         display: flex;
@@ -17,7 +112,7 @@
                 counter-increment: slides;
                 content: counter(slides);
                 position: absolute;
-                top: 0;
+                top: 45px;
                 left: 0;
                 z-index: 1;
                 width: 167px;
@@ -81,19 +176,16 @@
     }
 
     @include tablet-portrait {
-        max-width: 574px;
+        max-width: 682px;
+        border-radius: 50px;
         margin-left: auto;
         margin-right: auto;
+        padding-top: 97px;
+        padding-bottom: 52px;
     }
 
     @include laptop {
-        max-width: 1080px;
+        max-width: 1200px;
     }
-}
-
-.slider__item {
-    position: relative;
-    padding: 0 20px;
-
 
 }
