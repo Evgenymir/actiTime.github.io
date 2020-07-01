@@ -1,6 +1,6 @@
 -
 mixin slickItem
-	.advantages-slider__item
+	.slider-description-product__item
 		if block
 			block
 		else
@@ -8,19 +8,19 @@ mixin slickItem
 
 -
 mixin sliderItemContent(title, text, link, label)
-	article.advantages-slider__item-content
+	article.slider-description-product__item-content
 		if label
-			span.advantages-slider__item-label= label
-		h2.advantages-slider__item-title= title
-		p.advantages-slider__item-text= text
-		a(href="#").advantages-slider__item-link= link
-			svg(width="22" height="16").advantages-slider__item-icon
+			span.slider-description-product__item-label= label
+		h2.slider-description-product__item-title= title
+		p.slider-description-product__item-text= text
+		a(href="#").slider-description-product__item-link= link
+			svg(width="22" height="16").slider-description-product__item-icon
 				use(xlink:href="#icon-arrow-right-color")
 -;
 
-.advantages-slider
-	.advantages-slider__wrapper
-		.advantages-slider__content.j-advantages-slider
+.slider-description-product
+	.slider-description-product__wrapper
+		.slider-description-product__content.j-advantages-slider
 			+slickItem
 				+sliderItemContent(
 					"First Feature",
